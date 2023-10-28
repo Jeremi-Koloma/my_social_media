@@ -54,12 +54,13 @@ class LoginPage extends StatelessWidget {
                           ),
                           Container(
                             padding:
-                                const EdgeInsets.only(left: 15.0, right: 15.0),
+                                const EdgeInsets.only(left: 16.0, right: 16.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50.0),
                               color: const Color(0xffF1F2F6),
                             ),
                             child: TextFormField(
+                              validator: controller.validateEmail,
                               keyboardType: TextInputType.emailAddress,
                               decoration: const InputDecoration(
                                 hintText: 'Email',
@@ -73,14 +74,15 @@ class LoginPage extends StatelessWidget {
                           ),
                           Container(
                             padding:
-                                const EdgeInsets.only(left: 15.0, right: 15.0),
+                                const EdgeInsets.only(left: 16.0, right: 16.0),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(50.0),
                               color: const Color(0xffF1F2F6),
                             ),
                             child: Obx(() {
                               return TextFormField(
-                                obscureText: true,
+                                validator: controller.validatePassword,
+                                obscureText: !controller.showEyePassword.value,
                                 decoration: InputDecoration(
                                   hintText: 'Password',
                                   hintStyle:
@@ -112,7 +114,9 @@ class LoginPage extends StatelessWidget {
                             height: 50.0,
                             width: double.infinity,
                             child: FilledButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                controller.validateLoginForm();
+                              },
                               child: const Text("Sign In"),
                             ),
                           ),
