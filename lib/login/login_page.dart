@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:my_social_media/background_image.dart';
 import 'package:my_social_media/login/login_controller.dart';
+import 'package:my_social_media/register/register_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -41,9 +42,8 @@ class LoginPage extends StatelessWidget {
                         children: [
                           Text(
                             "Welcome Back",
-                            style: textTheme.displaySmall!.copyWith(
-                                //color: Colors.deepPurple,
-                                fontWeight: FontWeight.bold),
+                            style: textTheme.displaySmall!
+                                .copyWith(fontWeight: FontWeight.bold),
                           ),
                           const Text(
                             "Login to your account",
@@ -137,9 +137,15 @@ class LoginPage extends StatelessWidget {
                           ),
                         ),
                         TextButton.icon(
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.off(() => const RegisterPage());
+                          },
                           icon: const Icon(Icons.login),
-                          label: const Text("Sign up"),
+                          label: const Text("Sign Up"),
+                          style: TextButton.styleFrom(
+                            foregroundColor: const Color(0xffFF2C55),
+                            textStyle: const TextStyle(fontSize: 18.0),
+                          ),
                         ),
                       ],
                     ),
