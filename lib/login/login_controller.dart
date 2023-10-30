@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_social_media/navigation_menu_bar/navigation_menu_bar_page.dart';
 
 class LoginController extends GetxController {
   // Variable de type pour affichier et cacher l'oeil du mots de passe
@@ -53,7 +54,7 @@ class LoginController extends GetxController {
     // si les champs sont validés, on enregistre les données et on passe
     if (isValid) {
       formKey.currentState!.save();
-      //print("----- FORMULAIRE SAVE AND VALID -------");
+      Get.off(() => const NavigationMenuBarPage());
     }
   }
 }

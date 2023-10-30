@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:my_social_media/login/login_page.dart';
-import 'package:my_social_media/register/register_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
             seedColor: Colors.deepPurple, brightness: Brightness.light),
         useMaterial3: true,
       ),
-      home: const RegisterPage(),
+      home: const LoginPage(),
     );
   }
 }
