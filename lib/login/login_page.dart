@@ -11,8 +11,19 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // Le thème de couleur de notre application
     final textTheme = Theme.of(context).textTheme;
-    // créeons une instance de notre contoller Login
+    // créeons une instance de notre contoller Login pour la validation
     var controller = LoginController();
+    // Une variable globale de padding
+    const myPadding = EdgeInsets.only(left: 16.0, right: 16.0);
+    // une variable globale de boxDecoration
+    var myBoxDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(50.0),
+      color: const Color(0xffF1F2F6),
+    );
+    // Une variable globale pour la couleur des label
+    const myHintTextStyle = TextStyle(
+      color: Color(0xffBCC0CA),
+    );
     return SafeArea(
       child: Stack(
         children: [
@@ -53,18 +64,14 @@ class LoginPage extends StatelessWidget {
                             height: 40.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50.0),
-                              color: const Color(0xffF1F2F6),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: TextFormField(
                               validator: controller.validateEmail,
                               keyboardType: TextInputType.emailAddress,
                               decoration: const InputDecoration(
                                 hintText: 'Email',
-                                hintStyle: TextStyle(color: Color(0xffBCC0CA)),
+                                hintStyle: myHintTextStyle,
                                 border: InputBorder.none,
                               ),
                             ),
@@ -73,20 +80,15 @@ class LoginPage extends StatelessWidget {
                             height: 10.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(50.0),
-                              color: const Color(0xffF1F2F6),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: Obx(() {
                               return TextFormField(
                                 validator: controller.validatePassword,
                                 obscureText: !controller.showEyePassword.value,
                                 decoration: InputDecoration(
                                   hintText: 'Password',
-                                  hintStyle:
-                                      const TextStyle(color: Color(0xffBCC0CA)),
+                                  hintStyle: myHintTextStyle,
                                   border: InputBorder.none,
                                   suffixIcon: IconButton(
                                     onPressed: () {

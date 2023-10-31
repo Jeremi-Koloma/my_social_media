@@ -13,6 +13,17 @@ class RegisterPage extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     // créons une instance de notre controller
     var controller = RegisterController();
+    // Une variable globale de padding
+    const myPadding = EdgeInsets.only(left: 16.0, right: 16.0);
+    // une variable globale de boxDecoration
+    var myBoxDecoration = BoxDecoration(
+      borderRadius: BorderRadius.circular(50.0),
+      color: const Color(0xffF1F2F6),
+    );
+    // Une variable globale pour la couleur des label
+    const myHintTextStyle = TextStyle(
+      color: Color(0xffBCC0CA),
+    );
     return SafeArea(
       child: Stack(
         children: [
@@ -65,21 +76,13 @@ class RegisterPage extends StatelessWidget {
                             height: 40.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: const BoxDecoration(
-                              color: Color(0xffF1F2F6),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50.0),
-                              ),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: TextFormField(
                               validator: controller.validateUsername,
                               decoration: const InputDecoration(
                                 hintText: "Username",
-                                hintStyle: TextStyle(
-                                  color: Color(0xffBCC0CA),
-                                ),
+                                hintStyle: myHintTextStyle,
                                 border: InputBorder.none,
                               ),
                             ),
@@ -88,21 +91,13 @@ class RegisterPage extends StatelessWidget {
                             height: 10.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: const BoxDecoration(
-                              color: Color(0xffF1F2F6),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50.0),
-                              ),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: TextFormField(
                               validator: controller.validateEmail,
                               decoration: const InputDecoration(
                                 hintText: "Email",
-                                hintStyle: TextStyle(
-                                  color: Color(0xffBCC0CA),
-                                ),
+                                hintStyle: myHintTextStyle,
                                 border: InputBorder.none,
                               ),
                             ),
@@ -111,14 +106,8 @@ class RegisterPage extends StatelessWidget {
                             height: 10.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: const BoxDecoration(
-                              color: Color(0xffF1F2F6),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50.0),
-                              ),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: Obx(() {
                               return TextFormField(
                                 controller: controller.passwordCTRL,
@@ -126,9 +115,7 @@ class RegisterPage extends StatelessWidget {
                                 obscureText: !controller.showPasswordEye.value,
                                 decoration: InputDecoration(
                                   hintText: "Password",
-                                  hintStyle: const TextStyle(
-                                    color: Color(0xffBCC0CA),
-                                  ),
+                                  hintStyle: myHintTextStyle,
                                   border: InputBorder.none,
                                   suffixIcon: IconButton(
                                     onPressed: () {
@@ -153,23 +140,15 @@ class RegisterPage extends StatelessWidget {
                             height: 10.0,
                           ),
                           Container(
-                            padding:
-                                const EdgeInsets.only(left: 16.0, right: 16.0),
-                            decoration: const BoxDecoration(
-                              color: Color(0xffF1F2F6),
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(50.0),
-                              ),
-                            ),
+                            padding: myPadding,
+                            decoration: myBoxDecoration,
                             child: Obx(() {
                               return TextFormField(
                                 validator: controller.validateConfirmPassword,
                                 obscureText: !controller.showPasswordEye.value,
                                 decoration: InputDecoration(
                                   hintText: "Confirm password",
-                                  hintStyle: const TextStyle(
-                                    color: Color(0xffBCC0CA),
-                                  ),
+                                  hintStyle: myHintTextStyle,
                                   border: InputBorder.none,
                                   suffixIcon: IconButton(
                                     onPressed: () {

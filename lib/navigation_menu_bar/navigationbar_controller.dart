@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_social_media/home/home_page.dart';
 
 class NavigationbarController extends GetxController {
   // une variable qui va retourné le menu selectionné par l'utilisateur
@@ -7,7 +8,7 @@ class NavigationbarController extends GetxController {
 
   // L'ecran
   final screens = [
-    Container(color: Colors.amber),
+    const HomePage(),
     Container(color: Colors.green),
     Container(color: Colors.purple),
     Container(color: Colors.grey),
