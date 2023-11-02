@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_social_media/home/post_card.dart';
 import 'package:my_social_media/home/stories.dart';
 
 class HomePage extends StatelessWidget {
@@ -43,24 +44,23 @@ class HomePage extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0, top: 5.0),
-                child: Align(
-                  alignment: Alignment.topLeft,
-                  child: Text(
-                    "Stories",
-                    style: textTheme.headlineLarge!
-                        .copyWith(fontWeight: FontWeight.bold),
+          child: Padding(
+            padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Stories",
+                      style: textTheme.headlineLarge!
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
-              ),
-              const Padding(
-                padding: EdgeInsets.only(
-                    left: 16.0, top: 5.0, right: 16.0, bottom: 16.0),
-                child: SingleChildScrollView(
+                const SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
@@ -75,15 +75,15 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
-              // Main card
-              const Placeholder(),
-              const SizedBox(
-                height: 25.0,
-              ),
-              // Main card
-              const Placeholder()
-            ],
+                const SizedBox(height: 10.0),
+                const PostCard(),
+                const SizedBox(height: 10.0),
+                const PostCard(),
+                const SizedBox(
+                  height: 25.0,
+                ),
+              ],
+            ),
           ),
         ),
       ),

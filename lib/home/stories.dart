@@ -9,8 +9,8 @@ class Stories extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.all(10.0),
-          width: 100.0,
-          height: 150.0,
+          width: 125.0,
+          height: 200.0,
           decoration: const BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             image: DecorationImage(
