@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
+        toolbarHeight: 72,
         title: Container(
           width: double.infinity,
           decoration: const BoxDecoration(

@@ -9,7 +9,6 @@ class PostCard extends StatelessWidget {
     // Le thème de couleur de notre application
     final textTheme = Theme.of(context).textTheme;
     return Card(
-      elevation: 10,
       child: SizedBox(
         width: double.infinity,
         child: Column(

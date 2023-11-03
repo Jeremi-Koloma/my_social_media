@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:my_social_media/chats/chats_page.dart';
 import 'package:my_social_media/home/home_page.dart';
 
 class NavigationbarController extends GetxController {
@@ -10,7 +11,7 @@ class NavigationbarController extends GetxController {
   final screens = [
     const HomePage(),
     Container(color: Colors.green),
-    Container(color: Colors.purple),
+    const ChatsPage(),
     Container(color: Colors.grey),
   ];
 }
