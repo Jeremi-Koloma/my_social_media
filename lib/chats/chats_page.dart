@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_social_media/chats/chat_list.dart';
 import 'package:my_social_media/chats/online_users.dart';
 
 class ChatsPage extends StatelessWidget {
@@ -13,7 +14,10 @@ class ChatsPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         toolbarHeight: 72.0,
-        title: const Text('Messages'),
+        title: Text(
+          'Messages',
+          style: textTheme.headlineLarge,
+        ),
         centerTitle: true,
         actions: [
           IconButton(
@@ -48,7 +52,34 @@ class ChatsPage extends StatelessWidget {
                       OnlineUsers(),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(height: 20),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Chats",
+                      style: textTheme.headlineMedium!
+                          .copyWith(fontWeight: FontWeight.bold),
+                    ),
+                    TextButton.icon(
+                        onPressed: () {},
+                        icon: const FaIcon(FontAwesomeIcons.plus),
+                        label: const Text("New Chat"))
+                  ],
+                ),
+                const SizedBox(height: 8),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList(),
+                const ChatList()
               ],
             ),
           ),
