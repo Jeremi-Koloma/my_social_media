@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_social_media/home/add_story.dart';
 import 'package:my_social_media/home/post_card.dart';
 import 'package:my_social_media/home/stories.dart';
 
@@ -65,6 +66,8 @@ class HomePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
+                      AddStory(),
+                      SizedBox(width: 15.0),
                       Stories(),
                       SizedBox(width: 15.0),
                       Stories(),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Stories extends StatelessWidget {
-  const Stories({super.key});
+class AddStory extends StatelessWidget {
+  const AddStory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,27 +20,24 @@ class Stories extends StatelessWidget {
             ),
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 22.0,
-                backgroundColor: Colors.white,
+                backgroundColor: Theme.of(context).primaryColor,
                 child: Padding(
                   padding: const EdgeInsets.all(3),
                   child: ClipOval(
                     child: SizedBox.fromSize(
                       size: const Size.fromRadius(50.0),
-                      child: Image.asset(
-                        "assets/images/smile_bg.jpg",
-                        fit: BoxFit.cover,
-                      ),
+                      child: const Icon(Icons.add, color: Colors.white),
                     ),
                   ),
                 ),
               ),
               const Text(
-                "Alice Joyce",
+                "Add Story",
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(color: Colors.white, fontSize: 16.0),
               ),
