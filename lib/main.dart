@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.deepPurple, brightness: Brightness.light),
         primaryColor: Colors.deepPurple,
+        cardColor: const Color.fromARGB(159, 204, 205, 205),
         useMaterial3: true,
       ),
       home: const NavigationMenuBarPage(),

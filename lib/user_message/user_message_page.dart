@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:my_social_media/user_message/message_left.dart';
+import 'package:my_social_media/user_message/message_right.dart';
 
 class UserMessagePage extends StatelessWidget {
   const UserMessagePage({super.key});
@@ -9,7 +11,7 @@ class UserMessagePage extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 72.0,
+        toolbarHeight: 60.0,
         title: SizedBox(
           width: double.infinity,
           child: ListTile(
@@ -33,10 +35,24 @@ class UserMessagePage extends StatelessWidget {
           IconButton(onPressed: () {}, icon: const Icon(Icons.add_call))
         ],
       ),
-      body: const Center(
-        child: Text(
-          'Your message here...',
-          style: TextStyle(fontSize: 20),
+      body: const SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              MessageLeft(),
+              MessageRight(),
+              MessageLeft(),
+              MessageRight(),
+              MessageLeft(),
+              MessageRight(),
+              MessageLeft(),
+              MessageRight(),
+              MessageLeft(),
+              MessageRight(),
+              MessageLeft(),
+              MessageRight(),
+            ],
+          ),
         ),
       ),
     );
