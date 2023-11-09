@@ -13,7 +13,7 @@ class MessageLeft extends StatelessWidget {
       child: FittedBox(
         fit: BoxFit.contain,
         child: Container(
-          margin: const EdgeInsets.only(left: 10.0, bottom: 10.0),
+          margin: const EdgeInsets.only(bottom: 10.0),
           padding: const EdgeInsets.all(15.0),
           constraints: BoxConstraints(maxWidth: Get.width * 0.8),
           decoration: BoxDecoration(

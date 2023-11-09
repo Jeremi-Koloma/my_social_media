@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-//import 'package:my_social_media/login/login_page.dart';
 import 'package:my_social_media/navigation_menu_bar/navigation_menu_bar_page.dart';
 
 void main() {

@@ -28,15 +28,18 @@ class ChatList extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
           style: textTheme.bodySmall,
         ),
-        trailing: const Column(
+        trailing: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Text("06:58 PM"),
+            const Text("06:58 PM"),
             CircleAvatar(
               radius: 12,
-              backgroundColor: Colors.deepPurple,
-              child: Text("2"),
+              backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+              child: Text(
+                "3",
+                style: textTheme.labelMedium,
+              ),
             )
           ],
         ),

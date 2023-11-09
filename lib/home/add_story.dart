@@ -25,13 +25,13 @@ class AddStory extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 22.0,
-                backgroundColor: Theme.of(context).primaryColor,
+                backgroundColor: Theme.of(context).colorScheme.primaryContainer,
                 child: Padding(
                   padding: const EdgeInsets.all(3),
                   child: ClipOval(
                     child: SizedBox.fromSize(
                       size: const Size.fromRadius(50.0),
-                      child: const Icon(Icons.add, color: Colors.white),
+                      child: const Icon(Icons.add),
                     ),
                   ),
                 ),
