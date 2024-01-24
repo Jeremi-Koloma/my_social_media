@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:my_social_media/profil/edit_profil/edit_profil_page.dart';
 import 'package:my_social_media/profil/profil_menu.dart';
 
 class ProfilPage extends StatelessWidget {
@@ -44,7 +46,9 @@ class ProfilPage extends StatelessWidget {
                             ),
                             const Text("@canaldev"),
                             OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.to(() => const EditProfilPage());
+                              },
                               child: const Text("Edit profile"),
                             )
                           ],
@@ -68,7 +72,7 @@ class ProfilPage extends StatelessWidget {
                             Text("3120",
                                 style: textTheme.headlineSmall!
                                     .copyWith(fontWeight: FontWeight.bold)),
-                            Text("Follower", style: textTheme.bodySmall),
+                            Text("Followers", style: textTheme.bodySmall),
                           ],
                         ),
                         Column(
